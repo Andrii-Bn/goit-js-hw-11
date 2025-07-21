@@ -48,15 +48,13 @@ export function createGallery(images) {
 }
 
 export function clearGallery(gallery) {
-  if (gallery) {
-    gallery.innerHTML = '';
-  }
+  gallery.innerHTML = '';
 }
 
 export function showLoader() {
-  if (loader) loader.classList.remove('hidden');
+  loader.classList.remove('hidden');
 }
 
 export function hideLoader() {
-  if (loader) loader.classList.add('hidden');
+  loader.classList.add('hidden');
 }
