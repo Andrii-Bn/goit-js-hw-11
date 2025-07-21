@@ -43,11 +43,11 @@ export function createGallery(images) {
     `
     )
     .join('');
-
-  return markup;
+  gallery.insertAdjacentHTML('beforeend', markup);
+  lightbox.refresh();
 }
 
-export function clearGallery(gallery) {
+export function clearGallery() {
   gallery.innerHTML = '';
 }
 

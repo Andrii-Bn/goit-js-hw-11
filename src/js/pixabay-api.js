@@ -12,22 +12,7 @@ export function getImagesByQuery(query) {
       orientation: 'horizontal',
       safesearch: true,
     },
-  })
-    .then(res => {
-      if (res.data.hits.length == 0) {
-        iziToast.error({
-          message:
-            'Sorry, there are no images matching your search query. Please try again!',
-          position: 'topRight',
-        });
-        return;
-      }
-      return res.data;
-    })
-    .catch(err => {
-      alert('Error fetching images:' + err.message);
-    })
-    .finally(() => {
-      hideLoader();
-    });
+  }).then(res => {
+    return res.data;
+  });
 }
